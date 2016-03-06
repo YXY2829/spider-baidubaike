@@ -8,12 +8,13 @@ class HtmlOutputer(object):
     def collect_data(self,data):
 
         if data is None:
-            return 
+            return
         self.datas.append(data)
 
     def output_html(self):
         fout=open('output.html','w')
         fout.write('<html>')
+        fout.write('<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>')
         fout.write('<body>')
         fout.write('<table>')
 
@@ -27,5 +28,3 @@ class HtmlOutputer(object):
         fout.write('</table>')
         fout.write('</body>')
         fout.write('</html>')
-
-
